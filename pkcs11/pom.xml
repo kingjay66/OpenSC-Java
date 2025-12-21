@@ -110,12 +110,12 @@
               <mkdir dir="${jni.targetDir}/lib"/>
               <copy todir="${jni.targetDir}/lib">
                 <fileset dir="${jni.build.dir}/jniP11">
-                  <include name="${jni.libPrefix}${project.artifactId}-${project.majorVersion}.${jni.libExtension}" />
+                  <include name="${jni.libPrefix}${project.artifactId}-${project.majorVersion}.${jni.libExtension}"/>
                 </fileset>
               </copy>
               <zip zipfile="${jni.targetDir}/${project.artifactId}-${project.version}-${jni.classifier}.zip">
                 <fileset dir="${jni.targetDir}/lib">
-                  <include name="${jni.libPrefix}${project.artifactId}-${project.majorVersion}.${jni.libExtension}" />
+                  <include name="${jni.libPrefix}${project.artifactId}-${project.majorVersion}.${jni.libExtension}"/>
                 </fileset>
               </zip>
              </tasks>
@@ -192,7 +192,7 @@
       </activation>
       <properties>
        <jni.classifier>Windows-${os.arch}</jni.classifier>
-       <jni.libPrefix></jni.libPrefix>
+       <jni.libPrefix/>
        <jni.libExtension>dll</jni.libExtension>
 	     <jni.build.dir>jni/build/mingw/release</jni.build.dir>
       </properties>
@@ -261,7 +261,7 @@
 <dependency>
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-core</artifactId>
-    <version>2.17.1</version>
+    <version>2.25.3</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
